@@ -46,8 +46,11 @@ typical Arduino:
 - **Upload writes to the SD card.** The IDE **Upload** button copies the
   compiled sketch to the SD card mounted on your computer (macOS
   `/Volumes/RECOVERY`, Linux `/media/<user>/RECOVERY`) as `sketch.llext`, then
-  ejects it. Workflow: SD in your computer → Upload → move SD to the Pi → power
-  on. (Direct USB upload is planned for a later release.)
+  ejects it. Before pressing Upload: have the **SD card mounted** on your
+  computer, and **select any serial port** under Tools → Port (e.g. your
+  USB-UART adapter) — Arduino requires a port selected even though the copy
+  doesn't use it. Workflow: SD in computer → select port → Upload → move SD to
+  the Pi → power on. (Direct USB upload is planned for a later release.)
 - **LED_BUILTIN** is the on-board green ACT LED (BCM GPIO 29).
 
 Start from **File → Examples → PiZZA → Blink / HelloSerial**.
