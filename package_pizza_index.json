@@ -1,0 +1,81 @@
+{
+  "packages": [
+    {
+      "name": "pizza",
+      "maintainer": "jetpax",
+      "websiteURL": "https://github.com/jetpax/PiZZa",
+      "email": "jetpaxme@gmail.com",
+      "help": {
+        "online": "https://github.com/jetpax/PiZZa/issues"
+      },
+      "platforms": [
+        {
+          "name": "PiZZA Boards (Arduino on Zephyr)",
+          "architecture": "zephyr",
+          "version": "0.1.0",
+          "category": "Contributed",
+          "help": {
+            "online": "https://github.com/jetpax/PiZZa#readme"
+          },
+          "url": "https://github.com/jetpax/pizza-boards-index/releases/download/v0.1.0/ArduinoCore-pizza-0.1.0.tar.bz2",
+          "archiveFileName": "ArduinoCore-pizza-0.1.0.tar.bz2",
+          "checksum": "SHA-256:50b8aa7c9900be66d1a6e1bbfa0dd9f29b9f8a89b00056ce8ba3b879e4a7acc7",
+          "size": "3402261",
+          "boards": [
+            { "name": "PiZZA (Raspberry Pi Zero 2 W)" }
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "pizza",
+              "name": "aarch64-zephyr-elf",
+              "version": "0.17.0"
+            }
+          ]
+        }
+      ],
+      "tools": [
+        {
+          "name": "aarch64-zephyr-elf",
+          "version": "0.17.0",
+          "systems": [
+            {
+              "host": "x86_64-apple-darwin",
+              "url": "https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.17.0/toolchain_macos-x86_64_aarch64-zephyr-elf.tar.xz",
+              "archiveFileName": "toolchain_macos-x86_64_aarch64-zephyr-elf.tar.xz",
+              "checksum": "SHA-256:23f446173b2e6b589639563f79246413da482182a08e75c7b8b50a11343fbfa0",
+              "size": "53687652"
+            },
+            {
+              "host": "arm64-apple-darwin",
+              "url": "https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.17.0/toolchain_macos-aarch64_aarch64-zephyr-elf.tar.xz",
+              "archiveFileName": "toolchain_macos-aarch64_aarch64-zephyr-elf.tar.xz",
+              "checksum": "SHA-256:3b16ad2090d6d466b8f2581c52f38b0237b93eece06afd10a5f6eb4b612ce316",
+              "size": "44645268"
+            },
+            {
+              "host": "x86_64-pc-linux-gnu",
+              "url": "https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.17.0/toolchain_linux-x86_64_aarch64-zephyr-elf.tar.xz",
+              "archiveFileName": "toolchain_linux-x86_64_aarch64-zephyr-elf.tar.xz",
+              "checksum": "SHA-256:b4d5f5e56393636eb66e56ded16eb198ccefc9b2c08356e336f714aa86899546",
+              "size": "58709300"
+            },
+            {
+              "host": "aarch64-pc-linux-gnu",
+              "url": "https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.17.0/toolchain_linux-aarch64_aarch64-zephyr-elf.tar.xz",
+              "archiveFileName": "toolchain_linux-aarch64_aarch64-zephyr-elf.tar.xz",
+              "checksum": "SHA-256:0369a7be3c97e6743c7a79d6859c25f05bf986ba6d56306a97256e9cceaa8660",
+              "size": "53770748"
+            },
+            {
+              "host": "x86_64-mingw32",
+              "url": "https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.17.0/toolchain_windows-x86_64_aarch64-zephyr-elf.7z",
+              "archiveFileName": "toolchain_windows-x86_64_aarch64-zephyr-elf.7z",
+              "checksum": "SHA-256:0933e15bf92d98d2c298e9abfdd7b0b9c2ef04aad09c169bf64bab166ee98126",
+              "size": "48068503"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
