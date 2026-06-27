@@ -44,8 +44,9 @@ each `pizza-v*` tag (version, URL, checksum, size).
 - **Upload over USB (default).** The IDE **Upload** button streams the compiled
   sketch to the running loader over USB CDC and swaps it in place — no reboot,
   no card swap. Have the board's USB connected and its `usbmodem`/`ttyACM` port
-  selected under Tools → Port. (Requires `python3` with `pyserial` on your
-  computer.) The older **SD card reader** flow is still available under
+  selected under Tools → Port — nothing else to install; the uploader is a
+  self-contained tool the Boards Manager fetches for your OS. The older
+  **SD card reader** flow is still available under
   **Tools → Upload method** — it copies `sketch.llext` to the SD mounted at
   `/Volumes/RECOVERY` (macOS) / `/media/<user>/RECOVERY` (Linux) for
   headless / no-USB-host use.
@@ -53,12 +54,13 @@ each `pizza-v*` tag (version, URL, checksum, size).
 
 Start from **File → Examples → PiZZA → Blink / HelloSerial**.
 
-## Library support (v0.2.0)
+## Library support (v0.2.1)
 
 Wired and working on the rpi_zero_2w variant: **SPI**, **Wire** (I²C),
-**Serial** (UART), **GPIO**, **RTC**, and **WiFi** (brcmfmac).
+**Serial** (USB CDC; mini-UART as `Serial1`), **GPIO**, and **WiFi**
+(brcmfmac).
 
 Libraries with no backing driver on this board are not shipped (Camera,
-Storage, SDRAM, Ethernet, CAN, LED Matrix). There is no `analogRead`/ADC
+Storage, SDRAM, Ethernet, CAN, LED Matrix, RTC). There is no `analogRead`/ADC
 backing.
 

@@ -12,15 +12,15 @@
         {
           "name": "PiZZA Boards (Arduino on Zephyr)",
           "architecture": "zephyr",
-          "version": "0.2.0",
+          "version": "0.2.1",
           "category": "Contributed",
           "help": {
             "online": "https://github.com/jetpax/PiZZa#readme"
           },
-          "url": "https://github.com/jetpax/pizza-boards-index/releases/download/v0.2.0/ArduinoCore-pizza-0.2.0.tar.bz2",
-          "archiveFileName": "ArduinoCore-pizza-0.2.0.tar.bz2",
-          "checksum": "SHA-256:b838e44c0a8b96ae2000d42533b3667d675fda7746965ce43a9ed34cbf288e21",
-          "size": "3688848",
+          "url": "https://github.com/jetpax/pizza-boards-index/releases/download/v0.2.1/ArduinoCore-pizza-0.2.1.tar.bz2",
+          "archiveFileName": "ArduinoCore-pizza-0.2.1.tar.bz2",
+          "checksum": "SHA-256:166137d510550f1828d7b23082b5db4b5d6196f6ae1e01f78e3e78bf3f4564dc",
+          "size": "3680551",
           "boards": [
             {
               "name": "PiZZA (Raspberry Pi Zero 2 W)"
@@ -31,6 +31,11 @@
               "packager": "pizza",
               "name": "aarch64-zephyr-elf",
               "version": "0.17.0"
+            },
+            {
+              "packager": "pizza",
+              "name": "cdc-upload",
+              "version": "1.0.0"
             }
           ]
         }
@@ -74,6 +79,47 @@
               "archiveFileName": "toolchain_windows-x86_64_aarch64-zephyr-elf.7z",
               "checksum": "SHA-256:0933e15bf92d98d2c298e9abfdd7b0b9c2ef04aad09c169bf64bab166ee98126",
               "size": "48068503"
+            }
+          ]
+        },
+        {
+          "name": "cdc-upload",
+          "version": "1.0.0",
+          "systems": [
+            {
+              "host": "aarch64-linux-gnu",
+              "url": "https://github.com/jetpax/pizza-boards-index/releases/download/v0.2.1/cdc-upload-1.0.0-aarch64-linux-gnu.tar.gz",
+              "archiveFileName": "cdc-upload-1.0.0-aarch64-linux-gnu.tar.gz",
+              "checksum": "SHA-256:67bdc341fa61c92a377c6608f13655489e85891060bb18b9d9ba173c7cf3643b",
+              "size": "1317999"
+            },
+            {
+              "host": "arm64-apple-darwin",
+              "url": "https://github.com/jetpax/pizza-boards-index/releases/download/v0.2.1/cdc-upload-1.0.0-arm64-apple-darwin.tar.gz",
+              "archiveFileName": "cdc-upload-1.0.0-arm64-apple-darwin.tar.gz",
+              "checksum": "SHA-256:f1a795a7b3c57f669238710121dc7d82c652de7a5ef2e3882433b57258586a42",
+              "size": "1269853"
+            },
+            {
+              "host": "i686-mingw32",
+              "url": "https://github.com/jetpax/pizza-boards-index/releases/download/v0.2.1/cdc-upload-1.0.0-i686-mingw32.zip",
+              "archiveFileName": "cdc-upload-1.0.0-i686-mingw32.zip",
+              "checksum": "SHA-256:1ca0d22f58e69f0d4b047b68e876f1d56e342088e36f1c606ebe0abac5dfae88",
+              "size": "1490742"
+            },
+            {
+              "host": "x86_64-apple-darwin",
+              "url": "https://github.com/jetpax/pizza-boards-index/releases/download/v0.2.1/cdc-upload-1.0.0-x86_64-apple-darwin.tar.gz",
+              "archiveFileName": "cdc-upload-1.0.0-x86_64-apple-darwin.tar.gz",
+              "checksum": "SHA-256:5590d13cbbbe41ade0ef07bf70ef3c97fe6a89dbc4cc2625ee2cdb68cd66dc6a",
+              "size": "1315560"
+            },
+            {
+              "host": "x86_64-pc-linux-gnu",
+              "url": "https://github.com/jetpax/pizza-boards-index/releases/download/v0.2.1/cdc-upload-1.0.0-x86_64-linux-gnu.tar.gz",
+              "archiveFileName": "cdc-upload-1.0.0-x86_64-linux-gnu.tar.gz",
+              "checksum": "SHA-256:01852050e6117483126a00a65fb83f7ba49515e51b07bdc054d385069216b502",
+              "size": "1383525"
             }
           ]
         }
