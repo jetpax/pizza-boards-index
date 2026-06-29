@@ -44,8 +44,8 @@ That's the only time you touch the SD card.
 <details><summary>Advanced — build the image yourself / bring your own loader</summary>
 
 The image is built reproducibly from the Raspberry Pi boot blobs + `config.txt` +
-the loader (`zephyr.bin`) by
-[`os/Arduino/loader-image/make-image.sh`](https://github.com/jetpax/PiZZa/tree/main/os/Arduino/loader-image).
+the loader (`zephyr.bin`) by `os/Arduino/loader-image/make-image.sh` in the
+[PiZZa repo](https://github.com/jetpax/PiZZa).
 Or start from a Raspberry Pi OS card and drop `zephyr.bin` (shipped in the
 installed board package under
 `<Arduino15>/packages/pizza/hardware/zephyr/<version>/firmwares/`) plus a
