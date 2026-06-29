@@ -29,42 +29,29 @@ re-flash, no reboot.**
    (~50 MB).
 3. **Tools → Board → PiZZA (Raspberry Pi Zero 2 W)**.
 
-Installing also drops the **loader firmware** onto your computer — you'll flash it
-to the SD in Step 2:
+## Step 2 — Flash the loader to the SD card (one time)
 
-```
-<Arduino15>/packages/pizza/hardware/zephyr/<version>/firmwares/zephyr-rpi_zero_2w_bcm2710.bin
-```
+1. Download the ready-to-flash loader image —
+   **[pizza-loader-rpi_zero_2w-v0.3.1.img.xz](https://github.com/jetpax/PiZZa/releases/download/arduino-loader-v0.3.1/pizza-loader-rpi_zero_2w-v0.3.1.img.xz)**
+   (~2 MB; SHA-256 `a88834b9…`) from the
+   [PiZZa loader-image release](https://github.com/jetpax/PiZZa/releases/tag/arduino-loader-v0.3.1).
+2. Flash it with **Raspberry Pi Imager** (*Choose OS → Use custom* → pick the
+   `.img.xz`) or balenaEtcher — both read `.img.xz` directly, no unzip needed.
+3. Put the card in the Pi.
 
-`<Arduino15>` = `~/Library/Arduino15` (macOS), `~/.arduino15` (Linux), or
-`%LOCALAPPDATA%\Arduino15` (Windows); `<version>` is what you just installed
-(e.g. `0.3.1`).
+That's the only time you touch the SD card.
 
-## Step 2 — Put the loader on the SD card (one time)
+<details><summary>Advanced — build the image yourself / bring your own loader</summary>
 
-1. **Flash Raspberry Pi OS** to the microSD with Raspberry Pi Imager (the *Lite*
-   image is plenty). This gives a bootable card with the Pi's boot files.
-2. Re-insert the card and open its **boot** partition (`bootfs` / `boot` —
-   `/Volumes/bootfs` on macOS, `/media/<you>/bootfs` on Linux, a drive letter on
-   Windows).
-3. **Copy the loader** there, renamed to `zephyr.bin`:
-   ```
-   cp "<Arduino15>/packages/pizza/hardware/zephyr/<version>/firmwares/zephyr-rpi_zero_2w_bcm2710.bin" \
-      /Volumes/bootfs/zephyr.bin
-   ```
-4. **Replace `config.txt`** on that partition with exactly:
-   ```
-   arm_64bit=1
-   enable_uart=1
-   core_freq=250
-   kernel_address=0x200000
-   kernel=zephyr.bin
-   hdmi_force_hotplug=1
-   ```
-5. Eject the card and put it in the Pi.
-
-That's the only time you touch the SD card directly. *(A ready-to-flash image may
-come in a later release.)*
+The image is built reproducibly from the Raspberry Pi boot blobs + `config.txt` +
+the loader (`zephyr.bin`) by
+[`os/Arduino/loader-image/make-image.sh`](https://github.com/jetpax/PiZZa/tree/main/os/Arduino/loader-image).
+Or start from a Raspberry Pi OS card and drop `zephyr.bin` (shipped in the
+installed board package under
+`<Arduino15>/packages/pizza/hardware/zephyr/<version>/firmwares/`) plus a
+`config.txt` (`arm_64bit=1`, `kernel=zephyr.bin`, `enable_uart=1`,
+`core_freq=250`, `kernel_address=0x200000`) on its boot partition.
+</details>
 
 ## Step 3 — Your first sketch
 
